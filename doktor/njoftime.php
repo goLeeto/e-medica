@@ -1,7 +1,7 @@
 <?php 
 
 include ("connect.inc.php");
-$username=$_SESSION["sess_user"];
+$username=mysqli_real_escape_string($conn,$_SESSION["sess_user"]);
 $sql = mysqli_query($conn,"SELECT * FROM notification WHERE pacient_username='".$username."'");
 		echo '<table id="njoftime">';
 		while ($result = mysqli_fetch_array($sql)) {

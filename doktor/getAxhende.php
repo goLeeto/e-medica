@@ -4,9 +4,9 @@ include 'connect.inc.php';
 if (!isset($_SESSION['sess_user'])) {
 	session_start();
 }
-$doktori=$_SESSION['sess_user'];
+$doktori=mysqli_real_escape_string($conn,$_SESSION['sess_user']);
 if (isset($_POST['checked'])) {
-	$checked=$_POST['checked'];
+	$checked=mysqli_real_escape_string($conn,$_POST['checked']);
 }
 else
 {

@@ -1,7 +1,7 @@
 <?php
 	include 'connect.inc.php';
 
-	$username = $_POST['user_id'];
+	$username = mysqli_real_escape_string($conn,$_POST['user_id']);
 	$sql=("SELECT * FROM users WHERE username='$username'");
 
 	$result=mysqli_query($conn,$sql);

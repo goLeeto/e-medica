@@ -2,7 +2,7 @@
         include'connect.inc.php';
 
         if(isset($_POST["sign_in"])){
-            $user = $_POST['username1'];
+            $user = mysqli_real_escape_string($conn,$_POST['username1']);
             $pass = md5($_POST['password1']);
 
             $query = mysqli_query($conn,"SELECT * FROM users WHERE username='".$user."' AND password='".$pass."'");

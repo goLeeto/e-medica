@@ -3,7 +3,8 @@
 
 	function getUserData($username){
 		global $conn;
-		$sql = mysqli_query($conn,"SELECT * FROM users WHERE username='".$username."'");
+		$usrname = mysqli_real_escape_string($conn,$username);
+		$sql = mysqli_query($conn,"SELECT * FROM users WHERE username='".$usrname."'");
 		while($result = mysqli_fetch_array($sql)){
 			$array['username']= $result['username'];
 			$array['emri']= $result['Emri'];
@@ -19,7 +20,8 @@
 
 	function getUserNotification($username){
 		global $conn;
-		$sql = mysqli_query($conn,"SELECT * FROM notification WHERE pacient_username='".$username."'");
+		$usrname = mysqli_real_escape_string($conn,$username);
+		$sql = mysqli_query($conn,"SELECT * FROM notification WHERE pacient_username='".$usrname."'");
 		
 		while ($result = mysqli_fetch_array($sql)) {
 			$array['titulli'] = $result['titulli'];

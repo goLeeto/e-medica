@@ -1,8 +1,8 @@
 <?php 
 session_start();
 include "connect.inc.php";
-$uname=$_SESSION['sess_user'];
-$doktor=$_SESSION['doktori'];
+$uname=mysqli_real_escape_string($conn,$_SESSION['sess_user']);
+$doktor=mysqli_real_escape_string($conn,$_SESSION['doktori']);
 $result1 = mysqli_query($conn,"SELECT * FROM logs WHERE sender='".$uname."' AND receiver='".$doktor."' OR sender='".$doktor."' AND receiver='".$uname."' ORDER by id ASC");
 
 while($extract = mysqli_fetch_array($result1)){

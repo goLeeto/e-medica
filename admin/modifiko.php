@@ -6,7 +6,7 @@ if (!isset($_SESSION['sess_user'])) {
 }
 else {
 if (isset($_POST['submit'])) {
-	$ekzistues= $_POST['modifiko'];
+	$ekzistues= mysqli_real_escape_string($conn,$_POST['modifiko']);
 	?>
 	 <!DOCTYPE html>
  <html>
@@ -28,8 +28,8 @@ if (isset($_POST['submit'])) {
 
 }
 if (isset($_POST['ndrysho'])) {
-	$zevendesues = $_POST['zevendesues'];
-	$ekzistues = $_POST['ekzistues'];
+	$zevendesues = mysqli_real_escape_string($conn,$_POST['zevendesues']);
+	$ekzistues = mysqli_real_escape_string($conn,$_POST['ekzistues']);
 	$sql= ("UPDATE users SET doktori_familjes = '$zevendesues' WHERE doktori_familjes= '$ekzistues' ");
 	$result = mysqli_query($conn,$sql);
 	 if ($result) {

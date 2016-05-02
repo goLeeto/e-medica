@@ -2,10 +2,10 @@
 include 'connect.inc.php';
 if (isset($_POST['user'])) {
 	session_start();
-	$doktori_familjes=$_POST['user'];
+	$doktori_familjes=mysqli_real_escape_string($conn,$_POST['user']);
 }
 else{
-$doktori_familjes = $_SESSION['sess_user'];
+$doktori_familjes = mysqli_real_escape_string($conn,$_SESSION['sess_user']);
 }
 if(isset($_SESSION["sess_user"])){
 

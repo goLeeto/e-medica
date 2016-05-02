@@ -2,8 +2,8 @@
 	include 'connect.inc.php';
 	session_start();
 	if(isset($_POST['shto'])){
-		$username = $_POST['shto'];
-		$doktor= $_SESSION['sess_user'];
+		$username = mysqli_real_escape_string($conn,$_POST['shto']);
+		$doktor= mysqli_real_escape_string($conn,$_SESSION['sess_user']);
 		$sql= ("UPDATE users SET doktori_familjes= '$doktor' WHERE username='$username'");
 		$result=mysqli_query($conn,$sql);
 		if($result){
@@ -13,7 +13,7 @@
 		}
 
 	}else if(isset($_POST['fshi'])){
-		$username = $_POST['fshi'];
+		$username = mysqli_real_escape_string($conn,$_POST['fshi']);
 		$sql= ("DELETE FROM users WHERE username='$username'");
 		$result=mysqli_query($conn,$sql);
 		if($result){

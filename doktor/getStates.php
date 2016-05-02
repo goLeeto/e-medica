@@ -1,9 +1,9 @@
 <?php 
 	include'connect.inc.php';
 	session_start();
-	$doktor = $_SESSION['sess_user'];
-	$checked = $_POST['checked'];
-	$partialStates = $_POST['partialState'];
+	$doktor = mysqli_real_escape_string($conn,$_SESSION['sess_user']);
+	$checked = mysqli_real_escape_string($conn,$_POST['checked']);
+	$partialStates = mysqli_real_escape_string($conn,$_POST['partialState']);
 	if(substr($partialStates,0,strpos($partialStates, " "))){
 	$emri=substr($partialStates,0,strpos($partialStates, " "));
 	$mbiemri = substr($partialStates,(strpos($partialStates, " ")+1));

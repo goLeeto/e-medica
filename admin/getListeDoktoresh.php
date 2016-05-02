@@ -1,6 +1,6 @@
 <?php 
 include 'connect.inc.php';
-$doktori_familjes = $_SESSION['sess_user'];
+$doktori_familjes = mysqli_real_escape_string($conn,$_SESSION['sess_user']);
 if(isset($_SESSION["sess_user"])){
 $query = mysqli_query($conn,"SELECT * FROM users WHERE kategoria='doktor'");
 if($query === FALSE) { 

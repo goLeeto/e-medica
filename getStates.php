@@ -1,7 +1,7 @@
 <?php 
 	include'connect.inc.php';
 
-	$partialStates = $_POST['partialState'];
+	$partialStates = mysqli_real_escape_string($conn,$_POST['partialState']);
 
 	$states = mysqli_query($conn,"SELECT * FROM semundje WHERE simptomat LIKE '%$partialStates%'");
 	

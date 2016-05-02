@@ -4,7 +4,7 @@ include ("connect.inc.php");
 if(!isset($_SESSION['sess_user'])){
 	session_start();
 }
-$username=$_SESSION["sess_user"];
+$username=mysqli_real_escape_string($conn,$_SESSION["sess_user"]);
 $sql = mysqli_query($conn,"SELECT * FROM notification WHERE pacient_username='".$username."' ORDER BY id DESC LIMIT 3");
 $data = date('Y-m-d');
 $deleteoldnotification=mysqli_query($conn,"DELETE FROM notification WHERE data <'$data'");

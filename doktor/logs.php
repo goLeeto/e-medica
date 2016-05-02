@@ -1,9 +1,9 @@
 <?php 
 session_start();
 include "connect.inc.php";
-$uname=$_SESSION['sess_user'];
+$uname=mysqli_real_escape_string($conn,$_SESSION['sess_user']);
 if(isset($_POST['id'])){
-$pacient=$_POST['id'];
+$pacient=mysqli_real_escape_string($conn,$_POST['id']);
 }
 
 $limit=30;

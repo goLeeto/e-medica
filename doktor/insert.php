@@ -3,9 +3,9 @@
 session_start();
 if(isset($_SESSION["sess_user"])){
 include "connect.inc.php";
-$uname = $_SESSION['sess_user'];
-$msg = $_REQUEST['msg'];
-$pacient=$_REQUEST['id'];
+$uname = mysqli_real_escape_string($conn,$_SESSION['sess_user']);
+$msg = mysqli_real_escape_string($conn,$_REQUEST['msg']);
+$pacient=mysqli_real_escape_string($conn,$_REQUEST['id']);
 $queryemri=mysqli_query($conn,"SELECT Emri, Mbiemri FROM users WHERE username='$uname'");
 
 while ($emri=mysqli_fetch_array($queryemri)) {
