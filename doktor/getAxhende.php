@@ -27,7 +27,7 @@ $query=mysqli_query($conn,"SELECT * FROM notification WHERE doktori='$doktori'")
 echo "<ul id='axhenda'>";
 while ($result=mysqli_fetch_array($query)) {
 $id=$result['pacient_username'];
-$query2=mysqli_query("SELECT Emri, Mbiemri FROM users WHERE username='$id'");
+$query2=mysqli_query($conn,"SELECT Emri, Mbiemri FROM users WHERE username='$id'");
 $result2=mysqli_fetch_array($query2);
 $timenow=substr($result['ora'], 0,5);
 	echo "<li>".$result2['Emri']." ".$result2['Mbiemri']." ".$timenow." ".$result['titulli']." ".$result['data']. "</li>";

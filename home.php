@@ -424,11 +424,11 @@ $(document).ready(function(e){
 						<div class="panel_content">
 							<div id="notifications">
 							<div id="njoftime_foto"><div id="njoftime_titulli">Njoftimet</div></div>
-								<div id="user_notification" style="width: 30%;display: inline-block;float: left;">
+								<div id="user_notification" style="width: 65%;display: inline-block;float: left;">
 									<div><?php include 'njoftime.php'; ?></div>
 								</div>
 						
-								<div id="map-container" style="position:relative; float:right;min-width: 500px; max-width :500px; min-height: 500px; max-height: 500px;display: inline-block;">
+								<div id="map-container" style="position:relative; float:right;min-width: 500px; max-width :500px; min-height: 500px; max-height: 500px;display: inline-block;margin-right: -250px;">
 									<div id="map"style="min-width: 400px; max-width :400px; min-height: 400px; max-height: 400px;"></div>
     								<p><b>Address</b>: <span id="address"></span></p>
     								<p id="error"></p>
