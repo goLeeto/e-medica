@@ -31,10 +31,10 @@ if (isset($_POST['ndrysho'])) {
 	$zevendesues = $_POST['zevendesues'];
 	$ekzistues = $_POST['ekzistues'];
 	$sql= ("UPDATE users SET doktori_familjes = '$zevendesues' WHERE doktori_familjes= '$ekzistues' ");
-	$result = mysql_query($sql);
+	$result = mysqli_query($conn,$sql);
 	 if ($result) {
 	 	$sql = ("DELETE FROM users WHERE username= '$ekzistues'");
-	 	$result = mysql_query($sql);
+	 	$result = mysqli_query($conn,$sql);
 	 	if ($result){
 
 

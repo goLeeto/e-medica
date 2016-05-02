@@ -4,10 +4,10 @@
 	$username = $_POST['user_id'];
 	$sql=("SELECT * FROM users WHERE username='$username'");
 
-	$result=mysql_query($sql);
+	$result=mysqli_query($conn,$sql);
 	echo "<div id='te_dhena_pers'><h2>Te dhenat personale</h2>";
 	echo "<table id='pacient_info'>";
-	while($extract=mysql_fetch_array($result)){
+	while($extract=mysqli_fetch_array($result)){
 		echo "<tr><td>Emri:</td><td>".$extract['Emri']."</td></tr>";
 		echo "<tr><td>Mbiemri:</td><td>".$extract['Mbiemri']."</td></tr>";
 		echo "<tr><td>Ditelindja:</td><td>".$extract['ditelindja']."</td></tr>";
@@ -17,13 +17,13 @@
 	echo "</table>";
 	echo "</div>";
 
-	$query = mysql_query("SELECT * FROM diagnostifikim WHERE personi='$username'");
+	$query = mysqli_query($conn,"SELECT * FROM diagnostifikim WHERE personi='$username'");
 	if($query === FALSE) { 
-    	die(mysql_error()); 
+    	die(mysqli_error()); 
     }
     echo "<div id='te_dhena_mjek'><h2>Te dhenat mjekesore</h2>";
 	echo "<table id='pacient_info_mjek'>";
-	while($extract = mysql_fetch_array($query)){
+	while($extract = mysqli_fetch_array($query)){
 		echo "<tr><td>".$extract['semundja']."</td></tr>"."</br>"; 
 	}
 	echo "</table>";

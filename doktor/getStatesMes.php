@@ -11,10 +11,10 @@
 	$mbiemri = "";
 }
 	
-	$states = mysql_query("SELECT * FROM users WHERE Emri LIKE '$emri%'  AND Mbiemri LIKE '%$mbiemri%' AND doktori_familjes='$doktor' ");
+	$states = mysqli_query($conn,"SELECT * FROM users WHERE Emri LIKE '$emri%'  AND Mbiemri LIKE '%$mbiemri%' AND doktori_familjes='$doktor' ");
 	
 if(!empty($partialStates)){
-		while($state = mysql_fetch_array($states)){
+		while($state = mysqli_fetch_array($states)){
 			?>
 			
 			<div id="<?php echo $state['username']; ?>" class="mesage_pacient">

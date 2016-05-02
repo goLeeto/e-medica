@@ -15,20 +15,20 @@ else
 if ($checked==0)
 {
 $data = date('Y-m-d');
-$query=mysql_query("SELECT * FROM notification WHERE doktori='$doktori' AND data='$data' ");
+$query=mysqli_query($conn,"SELECT * FROM notification WHERE doktori='$doktori' AND data='$data' ");
 
 }
 else
 {
-$query=mysql_query("SELECT * FROM notification WHERE doktori='$doktori'");	
+$query=mysqli_query($conn,"SELECT * FROM notification WHERE doktori='$doktori'");	
 }
 
 
 echo "<ul id='axhenda'>";
-while ($result=mysql_fetch_array($query)) {
+while ($result=mysqli_fetch_array($query)) {
 $id=$result['pacient_username'];
-$query2=mysql_query("SELECT Emri, Mbiemri FROM users WHERE username='$id'");
-$result2=mysql_fetch_array($query2);
+$query2=mysqli_query("SELECT Emri, Mbiemri FROM users WHERE username='$id'");
+$result2=mysqli_fetch_array($query2);
 $timenow=substr($result['ora'], 0,5);
 	echo "<li>".$result2['Emri']." ".$result2['Mbiemri']." ".$timenow." ".$result['titulli']." ".$result['data']. "</li>";
 	echo "<br>";

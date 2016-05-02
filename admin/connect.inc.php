@@ -5,8 +5,8 @@ $mysql_password = '';
 
 $mysql_db = 'medica';
 
-
-	if(!mysql_connect($mysql_host, $mysql_user, $mysql_password) || !mysql_select_db($mysql_db)){
+$conn= mysqli_connect($mysql_host, $mysql_user, $mysql_password,$mysql_db);
+	if(!$conn){
 		die('error');
 
 	}

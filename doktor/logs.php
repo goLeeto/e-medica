@@ -7,10 +7,10 @@ $pacient=$_POST['id'];
 }
 
 $limit=30;
-$result1 = mysql_query("SELECT * FROM (SELECT * FROM logs WHERE sender='$uname' AND receiver='$pacient' OR sender='$pacient' AND receiver='$uname' ORDER by id DESC LIMIT $limit) AS test ORDER BY id ASC");
+$result1 = mysqli_query($conn,"SELECT * FROM (SELECT * FROM logs WHERE sender='$uname' AND receiver='$pacient' OR sender='$pacient' AND receiver='$uname' ORDER by id DESC LIMIT $limit) AS test ORDER BY id ASC");
 			
 
-while($extract = mysql_fetch_array($result1)){
+while($extract = mysqli_fetch_array($result1)){
 	$sender =strlen( $extract['sender']);
 	if($sender==15){
 		$class='sender_pacient';

@@ -6,6 +6,7 @@ if(!isset($_SESSION["sess_user"])){
 
 }else {
 	require("functions.php");
+	
 	$usersData = getUserData($_SESSION["sess_user"]);
 	$user_notification = getUserNotification($_SESSION["sess_user"]);
 ?>

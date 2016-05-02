@@ -5,9 +5,9 @@ include'connect.inc.php';
  
             $user = $_POST['username'];
             $pass = md5($_POST['pass']);
-            $query = mysql_query("SELECT * FROM users WHERE username='$user' AND password='$pass'");
+            $query = mysqli_query($conn,"SELECT * FROM users WHERE username='$user' AND password='$pass'");
 
-            $numrows=mysql_num_rows($query);
+            $numrows=mysqli_num_rows($query);
             echo $numrows;
 
  ?>

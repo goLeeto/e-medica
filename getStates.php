@@ -3,10 +3,10 @@
 
 	$partialStates = $_POST['partialState'];
 
-	$states = mysql_query("SELECT * FROM semundje WHERE simptomat LIKE '%$partialStates%'");
+	$states = mysqli_query($conn,"SELECT * FROM semundje WHERE simptomat LIKE '%$partialStates%'");
 	
 	if(!empty($partialStates)){
-		while($state = mysql_fetch_array($states)){
+		while($state = mysqli_fetch_array($states)){
 			?>
 			<div class="article">
 				<div class="item row">

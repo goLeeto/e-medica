@@ -8,7 +8,7 @@
 		$permbajtja = $_POST['permbajtjanjoftimit'];
 		$data = $_POST['data'];
 		$ora=$_POST['time'].":00";
-		$sql = mysql_query("INSERT INTO notification(titulli, permbajtja, pacient_username, doktori, data, ora) VALUES ('$titulli','$permbajtja','$pacient','$doktor','$data','$ora')");
+		$sql = mysqli_query($conn,"INSERT INTO notification(titulli, permbajtja, pacient_username, doktori, data, ora) VALUES ('$titulli','$permbajtja','$pacient','$doktor','$data','$ora')");
 
 
 	}

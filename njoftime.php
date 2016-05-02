@@ -5,11 +5,11 @@ if(!isset($_SESSION['sess_user'])){
 	session_start();
 }
 $username=$_SESSION["sess_user"];
-$sql = mysql_query("SELECT * FROM notification WHERE pacient_username='".$username."' ORDER BY id DESC LIMIT 3");
+$sql = mysqli_query($conn,"SELECT * FROM notification WHERE pacient_username='".$username."' ORDER BY id DESC LIMIT 3");
 $data = date('Y-m-d');
-$deleteoldnotification=mysql_query("DELETE FROM notification WHERE data <'$data'");
+$deleteoldnotification=mysqli_query($conn,"DELETE FROM notification WHERE data <'$data'");
 		
-		while ($result = mysql_fetch_array($sql)) {
+		while ($result = mysqli_fetch_array($sql)) {
 			echo "<div id='njoftime_pacient_table'>";
 			echo '<table  id="njoftime">';
 			$titulli=$result['titulli'];

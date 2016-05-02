@@ -4,8 +4,8 @@ include'connect.inc.php';
 
  
             $user = $_POST['username'];
-            $query = mysql_query("SELECT * FROM users WHERE username='".$user."'");
+            $query = mysqli_query($conn,"SELECT * FROM users WHERE username='".$user."'");
 
-            $numrows=mysql_num_rows($query);
+            $numrows=mysqli_num_rows($query);
             echo $numrows;
  ?>

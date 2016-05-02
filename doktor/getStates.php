@@ -12,12 +12,12 @@
 	$mbiemri = "";
 }
 	if($checked==0){
-	$states = mysql_query("SELECT * FROM users WHERE Emri LIKE '$emri%'  AND Mbiemri LIKE '%$mbiemri%' AND doktori_familjes='$doktor'  ");
+	$states = mysqli_query($conn,"SELECT * FROM users WHERE Emri LIKE '$emri%'  AND Mbiemri LIKE '%$mbiemri%' AND doktori_familjes='$doktor'  ");
 	}else{
-	$states = mysql_query("SELECT * FROM users WHERE Emri LIKE '$emri%'  AND Mbiemri LIKE '%$mbiemri%' AND kategoria='pacient'  ");
+	$states = mysqli_query($conn,"SELECT * FROM users WHERE Emri LIKE '$emri%'  AND Mbiemri LIKE '%$mbiemri%' AND kategoria='pacient'  ");
 	}
 if(!empty($partialStates)){
-		while($state = mysql_fetch_array($states)){
+		while($state = mysqli_fetch_array($states)){
 			?>
 			<div class="article">
 				<div class="item row">

@@ -2,8 +2,9 @@
 	require("connect.inc.php");
 
 	function getUserData($username){
-		$sql = mysql_query("SELECT * FROM users WHERE username='".$username."'");
-		while($result = mysql_fetch_array($sql)){
+		global $conn;
+		$sql = mysqli_query($conn,"SELECT * FROM users WHERE username='".$username."'");
+		while($result = mysqli_fetch_array($sql)){
 			$array['username']= $result['username'];
 			$array['emri']= $result['Emri'];
 			$array['mbiemri']= $result['Mbiemri'];
@@ -17,9 +18,10 @@
 	}
 
 	function getUserNotification($username){
-		$sql = mysql_query("SELECT * FROM notification WHERE pacient_username='".$username."'");
+		global $conn;
+		$sql = mysqli_query($conn,"SELECT * FROM notification WHERE pacient_username='".$username."'");
 		
-		while ($result = mysql_fetch_array($sql)) {
+		while ($result = mysqli_fetch_array($sql)) {
 			$array['titulli'] = $result['titulli'];
 			$array['permbajtja'] = $result['permbajtja'];
 		}

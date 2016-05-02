@@ -5,6 +5,6 @@ if (isset($_POST['diagnosa'])&&isset($_POST['id'])) {
 	$diagnosa=$_POST['diagnosa'];
 	$personi=$_POST['id'];
 	$sql="INSERT INTO diagnostifikim (`personi`,`semundja`) VALUES ('$personi','$diagnosa')";
-	$result=mysql_query($sql);
+	$result=mysqli_query($conn,$sql);
 }
 ?>

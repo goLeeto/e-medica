@@ -5,11 +5,11 @@
             $user = $_POST['username1'];
             $pass = md5($_POST['password1']);
 
-            $query = mysql_query("SELECT * FROM users WHERE username='".$user."' AND password='".$pass."'");
+            $query = mysqli_query($conn,"SELECT * FROM users WHERE username='".$user."' AND password='".$pass."'");
 
-            $numrows=mysql_num_rows($query);
+            $numrows=mysqli_num_rows($query);
             if($numrows!=0){
-                while($row=mysql_fetch_assoc($query)){
+                while($row=mysqli_fetch_assoc($query)){
                     $dbusername=$row['username'];
                     $dbpass=$row['Password'];
                     $doktor=$row['doktori_familjes'];
@@ -42,9 +42,9 @@
             $mbiemri = $_POST['last_name'];
             $gjinia = $_POST['gjinia'];
             $adresa = $_POST['adresa'];
-            $query = mysql_query("SELECT * FROM users WHERE username='".$user."'");
+            $query = mysqli_query($conn,"SELECT * FROM users WHERE username='".$user."'");
 
-            $numrows=mysql_num_rows($query);
+            $numrows=mysqli_num_rows($query);
             if($numrows==0){
                 
                 $kategoria;
@@ -60,7 +60,7 @@
 
                     $sql="INSERT INTO users(username,Emri,Mbiemri,password,adresa,gjinia,kategoria) VALUES ('$user','$emri', '$mbiemri', '$pass' , '$adresa' , '$gjinia' , '$kategoria')";
                 
-                $result=mysql_query($sql);
+                $result=mysqli_query($conn,$sql);
 
                 if($result){
                     session_start();
@@ -131,7 +131,7 @@ $("#submit_sign_up").css("cursor","default");
         
                    $.post('password.php',{ username: form1.username1.value, pass:pass},
             function(result){
-            
+         
                 if(result==0){
                  $("#sign_in_submit").attr('disabled', 'disabled');
                 $("#sign_in_submit").css("cursor","default");
@@ -169,13 +169,15 @@ $("#submit_sign_up").css("cursor","default");
 
 
             else{
-                if( $('#username_input').val().length !=5 || $('#username_input').val().length !=10  || $('#username_input').val().length !=15){
+
+                if( $('#username_input').val().length !=5 && $('#username_input').val().length !=10  && $('#username_input').val().length !=15){
                     $("#username_input").css("outline-color", "red");
                     $("#username_input").css("border-color", "red");
                     $('#feedback').html('ID jo e plote').show();
                     $("#submit_sign_up").attr('disabled', 'disabled');
                     $("#submit_sign_up").css("cursor","default");
                 }else {
+
                 $('#feedback').html('').show();
                 $("#username_input").css("outline-color", "green");
                 $("#username_input").css("border-color", "green");
