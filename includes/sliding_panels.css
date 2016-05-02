@@ -1,0 +1,464 @@
+#messages{
+	width: 50px;
+	background: transparent;
+	height: 500px;
+	margin-left: 500px;
+	margin-top:100px;
+	position: absolute;
+}
+
+#background2{
+	position: absolute;
+	margin-left: 89.3%;
+	margin-top: 50px;
+	width: 380px;
+	height: 700px;
+	background:url("back2.png");
+	background-repeat: no-repeat;
+}
+#background3{
+	position: absolute;
+	margin-left: 79.5%;
+	margin-top: 50px;
+	width: 600px;
+	height: 700px;
+	background:url("back3.png");
+	background-repeat: no-repeat;
+}
+
+#background1{
+	position: absolute;
+	margin-left: 83.5%;
+	margin-top: 5%;
+	width: 100%;
+	height: 120%;
+    background-size: 100% 100%;
+	background:url("back1.png");
+	background-repeat: no-repeat;
+}
+
+#header_image{
+	background: url("header.png");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	width: 100%;
+	height: 10%;
+}
+
+#shiriti {
+	background-image: url("shiriti.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 1000;
+	width: 625px;
+	height:50px;
+	margin-left: 500px;
+	margin-top: 2px;
+}
+
+
+#logo{
+  background-image: url("logoemedica2.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  margin-left: 3%;
+  top: 12%;
+  z-index: 10002;
+}
+
+ #prof{
+	height:850px ;
+	border:none;
+	background-image: url("test1.png");
+	background-color: #E6E8D8;
+	opacity: 0.9;
+	
+}
+
+#djag{
+	height:850px ;
+	border: none;
+	background-image: url("test1.png");
+	background-color: #E6E8D8;
+	opacity: 0.9;
+	
+}
+#msg1{
+	height:850px ;
+	background-image: url("test1.png");
+	background-color: #E6E8D8;
+	opacity: 0.9;
+	
+}
+#njof{
+	height:850px ;
+	background-image: url("test1.png");
+	background-color: #E6E8D8;
+	opacity: 0.9;
+}
+body {font-size:1.2em Arial; margin: 0px; padding: 0px; background-color: #fff;}
+.logout_button {
+	float: right;
+	margin-top: 20px;
+	position: relative;
+	z-index: 1002;
+	height: 40px;
+	width: 100px;
+	background-color: #FF9933; 
+}
+a, a:visited { 
+	
+	color: #ccc;
+	text-decoration: none;
+	
+	   }
+h1.fpo_text { color: #aaa; font-family: Times; font-size: 24px; background:transparent; }
+p.fpo_text { color: #aaa; font-family: Times; font-size: 16px; }
+
+.sp h2 { font-size: 1.15em; margin: 0 0 .5em 0; }
+.sp p { font-size: 1em; margin: 0 0 1em 0; }
+
+/* layout */
+.sp { overflow: hidden; width: 100%; position: relative; float: right; margin: 50px 0px 10px 25px; background: transparent;}
+.sp1 { overflow: hidden; width: 100%; position: absolute; float: right; top: 0; }
+
+.sp .tabs {width: 60%; position: relative; z-index: 101; display: none; margin:0px 0px 0px 40%; background: transparent; font-family: 'Lucida Sans Typewriter';}
+@font-face {
+    font-family: "Roboto";
+    src: url(Roboto-Medium.ttf) format("truetype");
+}
+
+.sp .tabs li {
+	display: inline-block;
+	border-top: 0px solid #ccc;
+	border-bottom: 0px solid #ccc;
+	padding: 8px 20px 4px 5px;
+	margin: 0px;
+	background: transparent;
+	cursor: pointer;
+	position: relative;
+	font-size: 28px;
+	font-family:"Roboto" ;
+	color: #795548;
+	
+	
+}
+
+.sp .tabs li:first-child {
+	padding-left: 15px;
+	border-left: 0px solid #ccc;
+	border-right: 0px solid #ccc;
+	-webkit-border-top-left-radius: 12px;
+	-moz-border-radius-topleft: 12px;
+	border-top-left-radius: 12px;
+}
+
+.sp .tabs li:last-child {
+	padding-right: 15px;
+	border-left: 0px solid #ccc;
+	border-right: 0px solid #ccc;
+	-webkit-border-top-right-radius: 12px;
+	-moz-border-radius-topright: 12px;
+	border-top-right-radius: 12px;
+}
+
+.sp .tabs li.selected {
+	color: #00BCD4;
+
+}
+
+.sp .panel_container {
+	position: relative;
+	border: 0px solid #ccc;
+	background:transparent;
+	overflow: hidden;
+	z-index: 100;
+	margin-top: 20px;
+	background: transparent;
+}
+.sp1 .panel_container1 {
+	position: relative;
+	border: 0px solid #ccc;
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 100;
+	top: 0;
+}
+
+.sp .panel_container .panel .panel_content { padding: 15px 15px 5px 15px; height: 100%; background: transparent; }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    }
+
+#personale{
+	margin-left: 8%;
+	margin-right: 10%;
+	margin-top: 50px;
+	display: inline-block;
+	background-color:transparent;
+	width: 25%;
+	height: 60%;
+	
+}
+#personal_table tr{
+	height: 30px;
+}
+#mjekesore_table tr {
+	height: 30px;
+}
+#njoftime_foto{
+	width: 850px;
+	height: 80px;
+	background:url("shiritmenu3.png"); 
+	background-repeat: no-repeat;
+}
+#mesazhe_foto{
+	margin-left: 250px;
+	margin-top: 50px;
+	width: 850px;
+	height: 80px;
+	background:url("shiritmenu4.png"); 
+	background-repeat: no-repeat;
+}
+#mjekesore{
+	position: absolute;
+	display: inline-block;
+	background:transparent;
+	margin-left: 140px;
+	margin-top: 50px;
+	width: 48%;
+	height: 120%;
+}
+#diag{
+	margin-top: 50px;
+}
+#title_personale{
+	height: 60px;
+	width: 500px;
+	
+	margin-bottom: 20px;
+	background: url("shiritmenu2.png");
+	background-repeat: no-repeat;
+	
+}
+ #titulli_personale{
+ 	margin-left: 150px;
+ 	padding-top: 17px;
+	font-size: 24px;
+	margin-top: 10px;
+	font-family: "Comic Sans MS", "Comic Sans";
+	font-weight: bold;
+	color: #F9A825; 
+}
+#title_mjekesore {
+	margin-left: 10px;
+	height: 60px;
+	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background: url("shiritmenu.png");
+	background-repeat: no-repeat;
+	
+}
+#mjekesore table{
+	margin-left: 50px;
+}
+
+#titulli_mjekesore{
+	margin-left: 40px;
+	padding-top: 17px;
+	font-size: 24px;
+	font-family: "Comic Sans MS", "Comic Sans";
+	font-weight: bold;
+	color: #F9A825; 
+}
+#njoftime{
+	margin: 0 auto;
+
+}
+#njoftime_pacient_table{
+
+	border: 2px solid #ccc;
+		margin-bottom: 5px;
+}
+#njoftime #titulli_njoftimit{
+	text-align: center;
+	font-size: 18px;
+	
+}
+#njoftime td{
+	text-align: center;
+	margin:0 auto;
+	height: 25px;
+	
+}
+
+#body_div{
+	width: 100%;
+    
+	overflow: hidden;
+}
+#notifications{
+	margin-left: 260px;
+	margin-top: 50px;
+	width: 65%;
+	display: inline-block;
+	background: transparent;
+}
+#user_notification{
+	display: inline-block;
+	width: 90%;
+	height: 500px;
+	
+}
+
+#child_notification{
+	width: 90%;
+	height: 150px;
+	background: transparent;
+
+}
+#kalendar{
+	position: absolute;
+	display: inline-block;
+	margin-top: 50px;
+	height: 400px;
+	width: 700px;
+	background: transparent;
+	margin-left: 20px;
+}
+#djag_tabel tr{
+	height: 50px;
+}
+
+#messages{
+	width: 60%;
+	background: transparent;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: 310px;
+	
+	
+}
+#mesazhe_titulli{
+	margin-left: 280px;
+	padding-top: 20px;
+	font-size: 30px;
+	color: #795548;
+	font-family: "Comic Sans MS", "Comic Sans";
+	font-weight: bold;
+}
+#njoftime_titulli{
+	margin-left: 280px;
+	padding-top: 20px;
+	font-size: 30px;
+	color: #795548;
+	font-family: "Comic Sans MS", "Comic Sans";
+	font-weight: bold;
+}
+
+#chatlogs{
+	overflow: scroll;
+	overflow-x:hidden; 
+	border:1px solid #ccc;
+	width: 500px;
+	height: 200px;
+	word-wrap:break-word;
+	padding: 10px 10px 10px 10px;
+	
+
+}
+#calendar {
+		max-width: 500px;
+	background: transparent;
+	}
+
+	#sh_color{
+	background-color:#00BCD4;
+	height:38px;
+	margin-top: 50px;
+	margin-left: 500px;
+	opacity:0.3;
+	position:absolute; 
+	top:0;
+ 	width:115px;
+ 	z-index:100;
+  }
+ .uName{ 
+color:#00F;
+font-weight:bold;
+font-size:15px;
+font-family:Verdana, Geneva, sans-serif;
+}
+
+.sender_doktor{
+ color:#390;
+ font-size:15px;
+ font-family:Georgia, "Times New Roman", Times,serif;
+ background: transparent;
+}
+
+.sender_pacient{
+	color:red;
+ font-size:15px;
+ font-family:Georgia, "Times New Roman", Times,serif;
+ background: transparent;
+}
+.button{
+ text-align:center;
+ background-color:#00F;
+ border-width:2px;
+ border-style:solid;
+ border-color:#000;
+ color:#FFF;
+ padding-left:10px;
+ padding-right:10px;
+ text-decoration:none;
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1024px)
+and (max-width : 1280px) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1281px)
+and (max-width : 1344px) {
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1345px)
+and (max-width : 1824px) {
+
+}
