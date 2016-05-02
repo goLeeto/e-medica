@@ -1,0 +1,150 @@
+.navbar.navbar-default.social{
+	min-height: 40px;
+	margin-bottom: 0px;
+	background-color:#f5f7fb;
+	
+}
+.navbar.navbar-default.social h6{
+	margin-right: 27px;
+	color: #506a85;
+	display: inline-block;
+}
+.navbar.navbar-default.social h6 span{
+	width:30px;
+	text-align: center;
+}
+.navbar.navbar-default{
+	min-height: 110px;
+	background-color:#fff;
+	border:none;
+	margin-bottom: 0px;
+}
+ .navbar-default .navbar-brand{
+	color:#506a85;
+	font-size: 55px;
+	line-height: 80px;
+}
+ul.nav.navbar-nav a{
+	font-weight: bold;
+	font-size: 15px;
+	color:#506a85;
+	line-height: 80px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	color: #00bc9c;
+	background-color:transparent;
+}
+ul.nav.navbar-nav a:hover{
+	color: #00bc9c;
+}
+.fa.fa-search{
+	line-height: 80px;
+	color:#506a85;
+}
+.container-fluid{
+	padding:0px;
+}
+.carousel-indicators li{
+	margin-top: 13px;
+	width:15px;
+	height:15px;
+	border-color:#506a85;
+	background-color: #506a85;
+	margin-right: 8px;
+}
+.carousel-indicators li:first{
+	margin-left: 10px;
+}
+.carousel-indicators .active{
+	background-color:#00bc9c;
+	width:15px;
+	height:15px;
+	margin-right: 8px;
+}
+.carousel-indicators{
+	width: 147px;
+	height: 45px;
+	background-color: #fff;
+	margin-left:-5%;
+}
+
+ol, ul{
+	margin-bottom:-50px;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
+	font-size: 20px;
+}
+.carousel-caption{
+	width: 100%;
+}
+.carousel-caption h1{
+	font-size:78px;
+}
+h1.titulli{
+	font-size: 44px;
+	color: #506a85;
+	padding-top: 110px;
+}
+h6.titulli{
+	padding-top: 20px;
+	font-size: 20px;
+	color: #9ca9b7;
+}
+.body3 h1{
+	color:#506a85;
+
+}
+.body3 h6{
+	color:#73879c;
+	padding-top: 10px;
+	font-size: 15px;
+	line-height: 20px;
+}
+.fa.fa-heart-o , .fa.fa-star-o,.fa.fa-lightbulb-o{
+	padding-top: 20px;
+	font-size: 55px;
+	color:#00bc9c;
+}
+h6.pull-left.up1:hover, .navbar.navbar-default.social h6:hover{
+	color:#00bc9c;
+}
+h6.pull-right{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.fa.fa-facebook, .fa.fa-google-plus, .fa.fa-twitter, .fa.fa-pinterest,.fa.fa-behance,.fa.fa-dribbble{
+	line-height: 40px;
+}
+.fa.fa-facebook:hover{
+	color:#fff;
+	background-color:#4668b3;
+}
+.fa.fa-google-plus:hover{
+	color:#fff;
+	background-color: #de5745;
+}
+.fa.fa-twitter:hover{
+	color:#fff;
+	background-color: #2fbbed;
+}
+.fa.fa-pinterest:hover{
+	color:#fff;
+	background-color: #d94348;
+}
+.fa.fa-behance:hover{
+	color:#fff;
+	background-color: #3079ff;
+}
+.fa.fa-dribbble:hover{
+	color:#fff;
+	background-color: #eb6397;
+}
+.para:hover{
+	color:#73879c;
+}
+.item.edisoni{
+	height: 620px;
+	background:url(../img/photo1.jpg);
+	background-size:contain;
+}

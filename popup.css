@@ -2,8 +2,17 @@
     font-family: "Roboto";
     src: url(Roboto-Medium.ttf) format("truetype");
 }
+.fa-heartbeat,.fa-ambulance,.fa-plus-square,.fa-question-circle {
+  font-size:40px;
+  display: block;
+  color: rgba(0,0,0,0.2);
+  margin-top:-8px;
+  margin-bottom:10px;
 
-
+}
+#kutia{
+  font-size:17px;
+}
 #body_div{
   margin-left: 140px;
   width: 1000px;
@@ -261,7 +270,9 @@ header[role="banner"] ul li {
 	list-style-type: none;
 
 }
-
+div#edi a {
+    color: white;
+  }
 .dark-red    { background-color: #c65204; }
 .dark-yellow { background-color: #e69900; }
 .dark-blue   { background-color: #63afa1; }
@@ -282,7 +293,7 @@ header[role="banner"] ul li {
         color: #eee;
         cursor: pointer;
         font-size: 12px;
-        margin: 5px 0;
+        margin-top: -15px;
         margin-left: 2%;
         margin-right: 15px;
    		float: right;
@@ -464,7 +475,7 @@ transition: background .55s ease;
 }
 
 #edi{
-  margin-top:-30px;
+  margin-top:-50px;
   margin-left: 40%;
   position: fixed;
   width: 48%;
@@ -473,9 +484,7 @@ transition: background .55s ease;
   z-index: 100;
 
 }
-#kutia{
-  margin-top: 30px;
-}
+
 #blu, #kafe, #portokalli, #portokalli1{
   height: 100px;
   width: 25%;
@@ -487,34 +496,34 @@ transition: background .55s ease;
 
 }
 #blu{
-  background-color: #2E8BE8;
+  background-color: #57b2d8;
   display: inline-block;
 
 }
 #blu:hover{
-  background-color: #85DED3;
+  opacity: 0.92;
 }
 #kafe{
-background-color: #E35E01;
+background-color: #8ccc7a;
    display: inline-block;
 }
 #kafe:hover{
-  background-color: #EB7C2F;
+  opacity: 0.92;
 }
 #portokalli{
-background-color: #FFAC00;
+background-color: #9d518a;
    display: inline-block;
 }
 #portokalli:hover{
-  background-color: #FFC242;
+      opacity: 0.92;
 }
 
 #portokalli1{
-  background-color: #FF9A17;
+  background-color: #dadf50;
    display: inline-block;
 }
 #portokalli1:hover{
-  background-color: #FAAC48;
+  opacity: 0.92;
 }
 
 #up{

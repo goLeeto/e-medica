@@ -4,7 +4,6 @@
         if(isset($_POST["sign_in"])){
             $user = mysqli_real_escape_string($conn,$_POST['username1']);
             $pass = md5($_POST['password1']);
-
             $query = mysqli_query($conn,"SELECT * FROM users WHERE username='".$user."' AND password='".$pass."'");
 
             $numrows=mysqli_num_rows($query);
@@ -84,8 +83,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="popup.css">
+
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -379,11 +379,9 @@ $('#reggjinia').bind("keyup focusout", function(){
 <body background="testt2.png" style="background-color:#EDE7F6;">
 <input class="input" id="edison" type="button" value="Sign In" />
 <!-- Headeri statik -->
-<div id= "up">
-<div id="kafe1"></div><div id="portokalli111"></div><div id="blu1"></div><div id="portokalli11"></div>
-</div>
+
 <div id= "edi">
-<a href="#"><div id="portokalli"><p id="kutia">E-medica</p></div></a><a href="#medica"><div id="blu"><p id="kutia">Cfare eshte ?</p></div></a><a href="#section2"><div id="kafe"><p id="kutia">Si ta perdorim</p></div></a><a href="#interesante_div"><div id="portokalli1"><p id="kutia">Te vecanta</p></div></a>
+<a href="#"><div id="portokalli"><p id="kutia"><i class='fa fa-heartbeat' aria-hidden='true'></i>E-medica</p></div></a><a href="#medica"><div id="blu"><p id="kutia"><i class='fa fa-question-circle' aria-hidden='true'></i>Cfare eshte ?</p></div></a><a href="#section2"><div id="kafe"><p id="kutia"><i class='fa fa-plus-square' aria-hidden='true'></i>Si ta perdorim</p></div></a><a href="#interesante_div"><div id="portokalli1"><p id="kutia"><i class='fa fa-ambulance' aria-hidden='true'></i>Te vecanta</p></div></a>
 </div>
 <!--Fundi i header-->
 
