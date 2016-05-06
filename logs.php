@@ -20,7 +20,8 @@ while($extract = mysqli_fetch_array($result1)){
   echo "<span class='".$class."'>". $extract['Emri']." ".$extract['Mbiemri'] . "</span>"."  :       "."<span class='mesazhi_span'>" 
  . $extract['msg']. "</span><br>"; 
 
- if($extract['new']==0){
+ if($extract['new']==0 && $extract['receiver']==$uname){
+ 	$message = $extract['msg'];
 		// show notification
  	?>
  	<script type="text/javascript">
@@ -39,9 +40,9 @@ while($extract = mysqli_fetch_array($result1)){
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
-    var notification = new Notification('New Message', {
+    var notification = new Notification('New Message From <?php echo $extract['Emri'];?>', {
       icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-      body: "Hey ckemi si je!",
+      body: '<?php echo $message;?>',
       tag: "#edison",
     });
     var filename = '1';
