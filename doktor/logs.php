@@ -8,6 +8,7 @@ $pacient=mysqli_real_escape_string($conn,$_POST['id']);
 
 $limit=30;
 $result1 = mysqli_query($conn,"SELECT * FROM (SELECT * FROM logs WHERE sender='$uname' AND receiver='$pacient' OR sender='$pacient' AND receiver='$uname' ORDER by id DESC LIMIT $limit) AS test ORDER BY id ASC");	
+$result2 = mysqli_query($conn,"SELECT * FROM (SELECT * FROM logs WHERE   receiver='$uname' ORDER by id DESC LIMIT $limit) AS test ORDER BY id ASC");	
 
 while($extract = mysqli_fetch_array($result1)){
 	$sender =strlen( $extract['sender']);
@@ -20,8 +21,11 @@ while($extract = mysqli_fetch_array($result1)){
  . $extract['msg']. "</span><br>"; 
 
 
- if($extract['new']==0 && $extract['receiver']==$uname){
- 	$message = $extract['msg'];
+ 
+}
+while($extract1 = mysqli_fetch_array($result2)){
+	if($extract1['new']==0 && $extract1['receiver']==$uname){
+ 	$message = $extract1['msg'];
 		// show notification
  	?>
  	<script type="text/javascript">
@@ -40,7 +44,7 @@ while($extract = mysqli_fetch_array($result1)){
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
-    var notification = new Notification('New Message From <?php echo $extract['Emri'];?>', {
+    var notification = new Notification('New Message From <?php echo $extract1['Emri'];?>', {
       icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
       body: '<?php echo $message;?>',
       tag: "#edison",
@@ -66,7 +70,7 @@ while($extract = mysqli_fetch_array($result1)){
 
  	<?php
 
- 	mysqli_query($conn,"UPDATE logs SET new = 1 WHERE sender='".$uname."' AND receiver='".$pacient."' OR sender='".$pacient."' AND receiver='".$uname."' ORDER by id ASC ");
+ 	mysqli_query($conn,"UPDATE logs SET new = 1 WHERE  receiver='".$uname."' ORDER by id ASC ");
 	
 	}
 }
