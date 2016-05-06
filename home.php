@@ -74,6 +74,7 @@ $(document).ready(function(e){
 		<title>Sliding Tabbed Panels</title>
 		<link type="text/css" rel="stylesheet" href="includes/sliding_panels.css" />
 		<script type="text/javascript" src="includes/sliding_panels.js"></script>
+	
 
 		
 
@@ -83,7 +84,7 @@ $(document).ready(function(e){
 	<div id="body_div">
 
 
-
+<div id="sound"></div>
 
 
 
@@ -137,6 +138,8 @@ $(document).ready(function(e){
 
 
 <a href="logout.php"><button style="cursor:pointer" class="logout_button">Log Out</button></a>
+<a href="#" id='permission' class="logout_button">Request permition</a>
+<a href="#" id='show' class="logout_button">show notification</a>
 
 
 

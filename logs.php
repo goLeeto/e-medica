@@ -16,9 +16,58 @@ while($extract = mysqli_fetch_array($result1)){
 
 
 
+
   echo "<span class='".$class."'>". $extract['Emri']." ".$extract['Mbiemri'] . "</span>"."  :       "."<span class='mesazhi_span'>" 
  . $extract['msg']. "</span><br>"; 
- 
+
+ if($extract['new']==0){
+		// show notification
+ 	?>
+ 	<script type="text/javascript">
+
+ 		document.addEventListener('DOMContentLoaded', function () {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+   
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('New Message', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey ckemi si je!",
+      tag: "#edison",
+    });
+    var filename = '1';
+    document.getElementById("sound").innerHTML=
+    '<audio autoplay="autoplay"><source src="' + filename + '.mp3" type="audio/mpeg" /><source src="' + filename + '.ogg" type="audio/ogg" /><embed hidden="true" autostart="true" loop="false" src="' + filename +'.mp3" /></audio>';
+
+
+    notification.onclick = function () {
+    window.focus();
+    notification.close()
+  };
+    
+  }
+
+
+
+ 	</script>
+
+
+
+
+ 	<?php
+
+ 	mysqli_query($conn,"UPDATE logs SET new = 1 WHERE sender='".$uname."' AND receiver='".$doktor."' OR sender='".$doktor."' AND receiver='".$uname."' ORDER by id ASC ");
+	
+	}
 }
 
 ?>﻿
