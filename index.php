@@ -125,13 +125,13 @@ $("#submit_sign_up").css("cursor","default");
     $(this).addClass('current');
   });
 
-  $('#password1').click(function(){
+  $('#password1').on("focus",function(){
      $('#password1').keyup(function(){
         var pass = form1.password1.value;
         
                    $.post('password.php',{ username: form1.username1.value, pass:pass},
             function(result){
-         
+
                 if(result==0){
                  $("#sign_in_submit").attr('disabled', 'disabled');
                 $("#sign_in_submit").css("cursor","default");

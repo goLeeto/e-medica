@@ -138,8 +138,6 @@ $(document).ready(function(e){
 
 
 <a href="logout.php"><button style="cursor:pointer" class="logout_button">Log Out</button></a>
-<a href="#" id='permission' class="logout_button">Request permition</a>
-<a href="#" id='show' class="logout_button">show notification</a>
 
 
 

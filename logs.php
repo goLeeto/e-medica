@@ -31,12 +31,6 @@ while($extract = mysqli_fetch_array($result1)){
     Notification.requestPermission();
 });
 
-
-  if (!Notification) {
-    alert('Desktop notifications not available in your browser. Try Chromium.'); 
-   
-  }
-
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
@@ -48,7 +42,6 @@ while($extract = mysqli_fetch_array($result1)){
     var filename = '1';
     document.getElementById("sound").innerHTML=
     '<audio autoplay="autoplay"><source src="' + filename + '.mp3" type="audio/mpeg" /><source src="' + filename + '.ogg" type="audio/ogg" /><embed hidden="true" autostart="true" loop="false" src="' + filename +'.mp3" /></audio>';
-
 
     notification.onclick = function () {
     window.focus();
