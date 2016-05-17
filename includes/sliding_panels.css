@@ -6,7 +6,10 @@
 	margin-top:100px;
 	position: absolute;
 }
-
+#personal_table{
+	
+    width: 440px;
+}
 #background2{
 	position: absolute;
 	margin-left: 89.3%;
@@ -270,7 +273,14 @@ ul {
 	
 }
 #mjekesore table{
-	margin-left: 50px;
+	margin-left: 12px;
+    width: 435px;
+    
+    
+}
+#mjekesore table,#personal_table,#djag_tabel,#njoftime {
+	color: rgb(248, 166, 33);
+	background: rgb(75, 75, 77);
 }
 
 #titulli_mjekesore{
@@ -283,6 +293,7 @@ ul {
 }
 #njoftime{
 	margin: 0 auto;
+	width:100%;
 
 }
 #njoftime_pacient_table{
