@@ -24,8 +24,8 @@ while($extract = mysqli_fetch_array($result1)){
 	}else{
 		$class='sender_doktor';
 	}
-  echo "<span class='".$class."'>". $extract['Emri']." ".$extract['Mbiemri'] . "</span>"."  :       "."<span class='mesazhi_span'>" 
- . $extract['msg']. "</span><br>"; 
+  echo "<span class='msg-container'><span class='".$class."'>". $extract['Emri']." ".$extract['Mbiemri'] . "</span>"."  :       "."<span class='mesazhi_span'>" 
+ . $extract['msg']. "</span></span><br>"; 
  
 }
 }
