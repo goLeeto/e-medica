@@ -35,7 +35,7 @@ while($extract = mysqli_fetch_array($result1)){
     Notification.requestPermission();
   else {
     var notification = new Notification('New Message From <?php echo $extract['Emri'];?>', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      icon: 'includes/chatIcon.png',
       body: '<?php echo $message;?>',
       tag: "#edison",
     });

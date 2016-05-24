@@ -415,9 +415,9 @@ $(document).ready(function(e){
 									Duke ngarkuar biseden...
 									</div>
 								<form name = "form1">
-									Your Message: <br />
-									<textarea id="mesagetext" name= "msg" rows="2" cols="40"></textarea><br />
-									<a href= "#"  onclick= "submitChat()" class= "button">Send</a><br /><br />
+									
+									<textarea id="mesagetext" name= "msg" rows="2" cols="40" style="resize:none;"></textarea><br />
+									<!-- <a href= "#"  onclick= "submitChat()" class= "button">Send</a><br /><br /> -->
 								</form>
 									
 								</div>

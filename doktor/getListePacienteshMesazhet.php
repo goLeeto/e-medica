@@ -43,7 +43,7 @@ while($extract = mysqli_fetch_array($query)){
     Notification.requestPermission();
   else {
     var notification = new Notification('New Message From <?php echo $extract1['Emri'];?>', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      icon: '../includes/chatIcon.png',
       body: '<?php echo $message;?>',
       tag: "#edison",
     });
@@ -80,7 +80,13 @@ while($extract = mysqli_fetch_array($query)){
 		}
 
 	}
-echo "<li id='".$id."' class='".$klasa."' >" .$extract['Emri']." ".$extract['Mbiemri']."</li>"; 
+	if($klasa == 'palexuar'){
+		echo "<li id='".$id."' class='".$klasa."' >" .$extract['Emri']." ".$extract['Mbiemri']." </li>"; 
+
+	}else{
+		echo "<li id='".$id."' class='".$klasa."' >" .$extract['Emri']." ".$extract['Mbiemri']."</li> "; 
+
+	}
 }
 echo "</ul>";
 }
