@@ -1,3 +1,63 @@
+#einsteinMonroButtons{
+	margin-left: 45%;
+}
+
+#einsteinMonroResult{
+	font-size: 20px;
+	display: block;
+	padding-top: 15px;
+	text-align: center;
+	margin:0 auto;
+}
+#einsteinMonroButtons span{
+	padding: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+	background-color: rgba(0,0,0,0.5);
+	
+}
+#einsteinMonroButtons #einsteinMonroStop,#einsteinMonroButtons #einsteinMonroStart{
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#einsteinMonroBackground{
+	position:absolute;
+	z-index:1000000;
+	 width:100vw;
+	 height:100vh;
+	 background-color:rgba(0, 0, 0, 0.7);
+	 top:0;
+	 left:0;
+	 margin: 0 auto;
+}
+#einsteinMonro{
+	position:absolute;
+	z-index:10000000;
+	 width:80vw;
+	 height:80vh;
+	 background-color:bisque;
+	 top:10vh;
+	 left:10vw;
+	 margin: 0 auto;
+	 border-radius: 5px;
+}
+
+#testo-shikimin{
+	text-align: center;
+}
+#testo-shikimin-span{
+	display: inline-block;
+	background-color: #FF9933;
+	line-height: 30px;
+	color:#4B4B4D;
+	border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+	
+}
+
 #messages{
 	width: 50px;
 	background: transparent;

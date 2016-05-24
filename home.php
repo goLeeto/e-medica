@@ -18,6 +18,7 @@ if(!isset($_SESSION["sess_user"])){
 	<meta charset='utf-8' />
 <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyAZGrqpxtNLhMqcP8e0FmbHaWDJAUfsQvo&callback=initialize"></script>
+<script src="includes/diagnostifikime.js"></script>
 <script>
 function submitChat(){
  if(form1.msg.value == '' ){
@@ -385,6 +386,15 @@ $(document).ready(function(e){
 												</td>
 											</tr>
 										</table>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+									<div id="testo-shikimin">
+									<span id="testo-shikimin-span">
+									Testo Shikimin
+									</span>
+									</div>
 									</td>
 								</tr>
 							</table>
