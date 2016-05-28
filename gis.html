@@ -5,7 +5,7 @@
 </head>
 <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyAZGrqpxtNLhMqcP8e0FmbHaWDJAUfsQvo&callback=initialize"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(document).ready(function(){
 	init();
 	
@@ -100,9 +100,63 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, 
         }
     });
 }
+</script> -->
+<script type="text/javascript">
+var first=0;
+var marker;
+var geocoder = new google.maps.Geocoder;
+var infowindow = new google.maps.InfoWindow;
+function init() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: {lat: 41.3275, lng: 19.8187}
+  });
+
+    google.maps.event.addListener(map, 'click', function(event) {
+    var latlng = event.latLng;
+
+    geocodeLatLng(geocoder, map, infowindow,latlng);
+
+  });
+}
+
+function geocodeLatLng(geocoder, map, infowindow,latlng) {
+    
+    console.log(latlng);
+    geocoder.geocode({'location': latlng}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+        console.log(results);
+      if (results[0]) {
+       
+        if (first==1) {
+           
+            marker.setMap(null);
+            marker=null;
+        }
+        map.setZoom(15);
+        marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+        document.getElementById('adresa').innerHTML=results[0].formatted_address;
+        first=1;
+      } else {
+        window.alert('Nuk u gjet asnje rezulat');
+      }
+    } else {
+      window.alert('Ka ndodhur nje gabim per shkak te: ' + status);
+    }
+  });
+    
+}
+
+
 </script>
-<body>
+<body onload="init()">
 <div id="map" style="position:relative;min-width: 500px; max-width :500px; min-height: 500px; max-height: 500px;display: inline-block;"></div>
+<div id="adresa">
+    
+</div>
 </body>
 </html>
 

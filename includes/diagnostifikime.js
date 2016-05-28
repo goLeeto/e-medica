@@ -8,6 +8,7 @@ document.getElementById("einsteinMonroBackground").addEventListener('click',func
 $('#einsteinMonroBackground').remove();
 $('#einsteinMonro').remove();
 clearInterval(interval);
+Width=50;
 });
 $('#einsteinMonroStart').click(function(){
 	clearInterval(interval);
@@ -25,28 +26,22 @@ $('#einsteinMonroStop').click(function(){
 		$('#einsteinMonroResult').html('Ju nuk keni probleme me shikimin.');
 	}
 	clearInterval(interval);
+	Width=50;
 	
 });
 });
-
-
 }
-
 function einsteinMonro (){
 
 		interval = setInterval(function(){
 			$('#einsteinMonroImage').attr("width",Width);
 			Width+=1;
-		if (Width==300) {
+		if (Width>300) {
 			clearInterval(interval);
-			
+			Width=50;		
 		}
 		},50);
 }
-
 $(document).ready(function(){
-
 showEyeTest();
-
-
 });
