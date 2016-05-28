@@ -172,7 +172,7 @@ body {font-size:1.2em Arial; margin: 0px; padding: 0px; background-color: #fff;}
 	width: 100px;
 	background-color: #FF9933; 
 }
-a, a:visited { 
+a { 
 	
 	color: #ccc;
 	text-decoration: none;
@@ -438,14 +438,17 @@ ul {
 }
 
 #chatlogs{
-	overflow: scroll;
-	overflow-x:hidden; 
+	overflow: scroll; 
+	overflow-x: hidden;
 	border:1px solid #ccc;
 	width: 500px;
-	height: 200px;
+	height: 270px;
 	word-wrap:break-word;
 	padding: 10px 10px 10px 10px;
-	
+	background-color:whitesmoke;
+	padding-bottom:50px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 
 }
 #calendar {
@@ -470,19 +473,87 @@ font-weight:bold;
 font-size:15px;
 font-family:Verdana, Geneva, sans-serif;
 }
+/*================================================================*/
+/*================================================================*/
+/*================================================================*/
+/*================================================================*/
 
-.sender_doktor{
- color:#390;
- font-size:15px;
- font-family:Georgia, "Times New Roman", Times,serif;
- background: transparent;
+.right{
+	float:right;
+	margin-bottom:5px;
+	background-image: url(right.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 324px 12px;
+}
+.left{
+	background-image: url(left.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 52px 12px;
 }
 
+/*.left div.mesazhi_span{
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 30px;
+    width: 45%;
+    background: rgba(86, 208, 112, 0.62);
+    line-height: 24px;
+    border-radius: 5px;
+}*/
+.msg-container{
+	width:80%;
+}
+.right{
+	text-align: right;
+}
+.right div.mesazhi_span{
+   	display: inline-block;
+	padding-right: 10px;
+    margin-right: 25px;
+    width: 65%;
+    background: rgb(79, 112, 130);
+    line-height: 30px;
+    border-radius: 5px;
+    color:white;
+}
+.left div.mesazhi_span{
+	display: inline-block;
+	padding-left: 10px;
+    margin-left: 25px;
+    width: 65%;
+    background: rgb(146, 222, 162);
+    line-height: 30px;
+    border-radius: 5px;
+    color:white;
+}
 .sender_pacient{
-	color:red;
- font-size:15px;
- font-family:Georgia, "Times New Roman", Times,serif;
- background: transparent;
+	display: inline-block;
+    background: rgba(12, 58, 84, 0.71);
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 5px;
+    font-size: 15px;
+ 	font-family:Georgia, "Times New Roman", Times,serif;
+ 	width: 30px;
+ 	height: 30px;
+ 	border: 1px solid #92DEA2;
+}
+.sender_doktor{
+    display: inline-block;
+    background: rgba(86, 208, 112, 0.62);
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 5px;
+    font-size: 15px;
+ 	font-family:Georgia, "Times New Roman", Times,serif;
+ 	width:30px;
+ 	height:30px;
+ 	border: 1px solid #4F7082;
 }
 .button{
  text-align:center;
@@ -495,41 +566,75 @@ font-family:Verdana, Geneva, sans-serif;
  padding-right:10px;
  text-decoration:none;
 }
+#mesagetext{
+	margin-left:10px;
+	resize: none;
+    margin-top: -50px;
+    display: -webkit-box;
+    position: relative;
+    background: white;
+    width:96%;
+    border-radius: 5px;
+    border-color: #E5E3E3;
+    box-sizing: border-box;
+    padding-right: 70px;
+}
+
+.send{
+	z-index: 2;
+    position: absolute;
+    right: 17px;
+    margin-top: 6px;
+    border: 0px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: #249ADB;
+    color: white;
+}
 
 
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
+.inicialet{
+	line-height: 30px;
+	color: #F7931E;
+    font-weight: bold;
+}
+
+
+
+
+#chatlogs::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 5px;
+}
+
+#chatlogs::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
 
 }
 
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-
+#chatlogs::-webkit-scrollbar-thumb
+{
+	background-color: #F90;	
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
 }
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1024px)
-and (max-width : 1280px) {
-
-}
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1281px)
-and (max-width : 1344px) {
-
-}
-
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1345px)
-and (max-width : 1824px) {
-
+.msg_bottom{
+	position: relative;
+    width: 510px;
+    background: whitesmoke;
+    height: 50px;
+    z-index: 10;
+    margin-left:1px;
 }

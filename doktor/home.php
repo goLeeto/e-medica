@@ -186,10 +186,11 @@ $(document).keypress(function(e) {
  xmlhttp.send();
     }
 });
-	$('.button').click(function(){
+	$('#send-btn').click(function(){
+		alert();
 		$('#chatlogs').stop().animate({
   scrollTop: $("#chatlogs")[0].scrollHeight
-}, 500);
+}, 800);
 				if(form1.msg.value === '' ){
   					alert('Nuk mund te dergoni mesazh bosh');
   				return;
@@ -560,13 +561,14 @@ function getStatesNjoftime(value){
 							<div id="chatlogs"> 
 
 									Duke ngarkuar biseden...
-									</div>
-								<form name = "form1">
-									
+							</div>
+							<div class='msg_bottom'>
+								<form name = "form1" style="width:inherit;">
+									<a href= "#" class= "button send" id='send-btn'>Send</a>
 									<textarea id="mesagetext" name= "msg" rows="2" cols="40" style="resize:none;"></textarea><br />
-									<!-- <a href= "#" class= "button">Send</a><br /><br /> -->
+									     
 								</form>
-									
+							</div>	
 								</div>
 							
 						</div>

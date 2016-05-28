@@ -38,13 +38,19 @@ function submitChat(){
  }
  xmlhttp.open('GET','insert.php?uname='+uname+ '&msg='+msg, true);
  xmlhttp.send();
- 
+ form1.msg.value = '';
  
 }
 $(document).ready(function(e){
  $.ajaxSetup({cache:false});
+ //$('#chatlogs').load('logs.php');
  setInterval(function(){$('#chatlogs').load('logs.php');}, 2000);
  setInterval(function(){$('#user_notification').load('njoftime.php');},4000);
+
+
+
+
+
  $(document).keypress(function(e) {
     if(e.which == 13) {
         $('#chatlogs').stop().animate({
@@ -413,12 +419,15 @@ $(document).ready(function(e){
 							<div id="chatlogs"> 
 
 									Duke ngarkuar biseden...
-									</div>
-								<form name = "form1">
-									
-									<textarea id="mesagetext" name= "msg" rows="2" cols="40" style="resize:none;"></textarea><br />
-									<!-- <a href= "#"  onclick= "submitChat()" class= "button">Send</a><br /><br /> -->
+							</div>
+							<div class='msg_bottom'>
+								<form name = "form1" style="width:inherit;">
+									<a href= "#"  onclick= "submitChat()" class= "button send">Send</a>
+									<textarea id="mesagetext" name= "msg" rows="2" cols="40" style="resize:none;"></textarea>
+									 
 								</form>
+							</div>
+								
 									
 								</div>
 
