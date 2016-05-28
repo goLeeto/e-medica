@@ -15,11 +15,7 @@ if(!isset($_SESSION["sess_user"])){
 <html>
 	<head>
 	<meta charset='utf-8' />
-<link href='fullcalendar.css' rel='stylesheet' />
-<link href='fullcalendar.print.css' rel='stylesheet' media='print' />
 <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
-<script src='lib/moment.min.js'></script>
-<script src='fullcalendar.min.js'></script>
 <script>
 $(document).ready(function() {
 
