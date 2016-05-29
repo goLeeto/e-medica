@@ -12,7 +12,7 @@ if(!isset($_SESSION["sess_user"])){
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Home</title>
+		<title>Administration E-Medica</title>
 		<style type="text/css">
 		table{
 			margin-left: 80px;
@@ -22,10 +22,19 @@ if(!isset($_SESSION["sess_user"])){
 		#liste_doktoresh{
 			margin-top: 100px;
 			border: 2px solid #ccc;
-			width: 400px;
+			width: 500px;
 			height: 500px;
-			overflow: auto;
+	
+			display: inline-block;
 
+		}
+
+		#liste_pacientesh{
+			margin-top: 100px;
+			border: 2px solid #ccc;
+			width: 500px;
+			height: 500px;
+			display: inline-block;
 		}
 
 		</style>
@@ -37,7 +46,8 @@ if(!isset($_SESSION["sess_user"])){
 			<div>
 				<div class="panel">
 						<div class="panel_content">
-							<div id="liste_doktoresh">
+							<div id="liste_doktoresh">	
+								<h2 style="text-align:center">Lista e doktoreve</h2>
 							
 								<?php include 'getListeDoktoresh.php'; ?>
 		
@@ -47,7 +57,28 @@ if(!isset($_SESSION["sess_user"])){
 									
 								</div>
 						</div>
-				
+						
+				</div>
+			</div>	
+
+			<!--Liste pacientesh -->
+			<div>
+				<div class="panel">
+						<div class="panel_content">
+							<div id="liste_pacientesh">	
+								<h2 style="text-align:center">Lista e pacienteve</h2>
+							
+								<?php include 'getListePacientesh.php'; ?>
+		
+						
+							</div>
+								<div>
+									
+								</div>
+						</div>
+						
+				</div>
+			</div>	
 	</body>
 </html>
 <?php

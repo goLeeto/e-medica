@@ -18,9 +18,12 @@ while($extract = mysqli_fetch_array($query)){
 	<form action='modifiko.php' method='POST'> 
 	<input type='hidden' value=<?php echo $id; ?> name='modifiko'/>
 	</td>
-	<td><input type='submit' id='submit' name='submit' value='Modifiko'></form></td>
-	
-	
+	<td><input type='submit' id='submit' name='submit' value='Ndrysho Mjekun'></form></td>
+
+	<form action='modifikoPassword.php' method='POST'> 
+	<input type='hidden' value=<?php echo $id; ?> name='modifiko'/>
+	</td>
+	<td><input type='submit' id='submit' name='submit' value='Ndrysho Password'></form></td>
 	</tr>
 		
 		<?php				
