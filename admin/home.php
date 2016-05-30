@@ -44,6 +44,7 @@ if(!isset($_SESSION["sess_user"])){
     			height: 40px;
     			width: 100px;
     			background-color: #FF9933;
+    			cursor: pointer;
 		}
 
 		body {
@@ -80,7 +81,6 @@ if(!isset($_SESSION["sess_user"])){
 		<div>
 			<a href="../logout.php"><button class="logout_button">Log Out</button></a>
 		</div>
-			<div>
 			<div>
 			<div id="header_image"></div>
 			<div id="logo"></div>
@@ -120,7 +120,6 @@ if(!isset($_SESSION["sess_user"])){
 						
 				</div>
 			</div>	
-			</div>
 	</body>
 </html>
 <?php

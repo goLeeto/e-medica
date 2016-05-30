@@ -12,13 +12,27 @@ if (isset($_POST['submit'])) {
  <html>
  <head>
  	<title></title>
+ 	<style type="text/css">
+ 	body {
+			height: 850px;
+   			border: none;
+    		background-image: url("test1.png");
+   			background-color: #E6E8D8;
+    		opacity: 0.9;
+		}</style>
  </head>
  <body>
  <form action="modifikoPassword.php" method="POST">
  	Username: <input type="text" id="ekzistues" name="ekzistues" readonly value="<?php echo $ekzistues; ?>" /> </br>
  	Passwordi i ri: <input type="text" id="passiri" name="passiri"/></br>
  	Perserit Passwordin i ri: <input type="text" id="passiri2" name="passiri2"/>
- 	<input type="Submit" id="ndrysho" name="ndrysho" value="Ndrysho"/>
+ 	<input type="Submit" id="ndrysho" name="ndrysho" value="Ndrysho" style="cursor:pointer; background-color: #FF9933;
+    line-height: 30px;
+    color: #4B4B4D;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;" />
  </form>
  </body>
  </html>

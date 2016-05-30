@@ -12,12 +12,30 @@ if (isset($_POST['submit'])) {
  <html>
  <head>
  	<title></title>
+ 	<style type="text/css">
+ 	body {
+			height: 850px;
+   			border: none;
+    		background-image: url("test1.png");
+   			background-color: #E6E8D8;
+    		opacity: 0.9;
+		}
+
+		#ndrysho {
+			    background-color: #FF9933;
+    line-height: 30px;
+    color: #4B4B4D;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+			}</style>
  </head>
  <body>
  <form action="modifiko.php" method="POST">
  	Doktori Ekzistues: <input type="text" id="ekzistues" name="ekzistues" readonly value="<?php echo $ekzistues; ?>" /> </br>
  	Doktori Zevendesues: <input type="text" id="zevendesues" name="zevendesues"/>
- 	<input type="Submit" id="ndrysho" name="ndrysho" value="Ndrysho"/>
+ 	<input type="Submit" id="ndrysho" name="ndrysho" value="Ndrysho" style="cursor:pointer" />
  </form>
  </body>
  </html>
