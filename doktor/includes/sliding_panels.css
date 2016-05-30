@@ -613,20 +613,7 @@ font-family:Verdana, Geneva, sanas-serif;
 /*================================================================*/
 /*================================================================*/
 
-.right{
-	float:right;
-	margin-bottom:5px;
-	background-image: url(right.png);
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: 324px 12px;
-}
-.left{
-	background-image: url(left.png);
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: 52px 12px;
-}
+
 
 /*.left div.mesazhi_span{
     position: relative;
@@ -776,7 +763,56 @@ font-family:Verdana, Geneva, sanas-serif;
 
 
 
+.right{
+	float:right;
+	margin-bottom:1px;
+}
 
+.right1{
+	background-image: url(right.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 324px 12px;
+    margin-bottom: -5px;
+}
+.left{
+	float: left;
+	margin-bottom:1px;
+}
+.left1{
+	background-image: url(left.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 52px 12px;
+    margin-bottom: -5px;
+}
+.sender_doktor1{
+    display: inline-block;
+    background: rgba(86, 208, 112, 0.62);
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 5px;
+    font-size: 15px;
+ 	font-family:Georgia, "Times New Roman", Times,serif;
+ 	width:30px;
+ 	height:0px;
+ 	border: 1px solid #4F7082;
+ 	vertical-align: middle;
+}
+.sender_pacient1{
+	display: inline-block;
+    background: rgba(12, 58, 84, 0.71);
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 5px;
+    font-size: 15px;
+ 	font-family:Georgia, "Times New Roman", Times,serif;
+ 	width: 30px;
+ 	height: 0px;
+ 	border: 1px solid #92DEA2;
+}
 
 
 

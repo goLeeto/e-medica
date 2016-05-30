@@ -18,27 +18,40 @@ mysqli_query($conn,"INSERT INTO logs(`sender` , `msg` , `receiver`,  `Emri`,`Mbi
 $result1 = mysqli_query($conn,"SELECT * FROM logs WHERE sender='".$uname."' AND receiver='".$doktor."' OR sender='".$doktor."' AND receiver='".$uname."' ORDER by id ASC");
 
 while($extract = mysqli_fetch_array($result1)){
+
 	$sender =strlen( $extract['sender']);
-	$name = $extract['Emri'];
-		$firstLetter = strtoupper($name[0]);
-		$last= $extract['Mbiemri'];
-  		$lastLetter = strtoupper($last[0]);
-
+  $name = $extract['Emri'];
+    $firstLetter = strtoupper($name[0]);
+    $last= $extract['Mbiemri'];
+      $lastLetter = strtoupper($last[0]);
+if (strcmp($previousE,$extract['Emri'])==0 && strcmp($previousM,$extract['Mbiemri'])==0) {
 	if($sender==10){
-		$class='sender_pacient';
-
-		echo "<div class='msg-container right'><div class='mesazhi_span'>" 
- . $extract['msg']. "</div><div class='".$class."'><div class='inicialet'>". $firstLetter." ".$lastLetter . "</div></div></div><br><br><br><br>"; 
-		  
+		$class='sender_pacient1';
+echo "<div class='msg-container right'><div class='mesazhi_span'>" 
+ . $extract['msg']. "</div><div style='visibility:hidden;' class='".$class."'></div></div>"; 
+     
 	}else{
-		$class='sender_doktor';
-		  echo "<div class='msg-container left'><div class='".$class."'><div class='inicialet'>". $firstLetter." ".$lastLetter . "</div></div><div class='mesazhi_span'>" 
- . $extract['msg']. "</div></div><br>";
+		$class='sender_doktor1';
+echo "<div class='msg-container left'><div style='visibility:hidden;' class='".$class."'><div class='inicialet'>". $firstLetter." ".$lastLetter . "</div></div><div class='mesazhi_span'>" 
+ . $extract['msg']. "</div></div>";
+
 	}
-		
+}else{
+  if($sender==10){
+    $class='sender_pacient';
 
+echo "<div class='msg-container right right1'><div class='mesazhi_span'>" 
+ . $extract['msg']. "</div><div class='".$class."'><div class='inicialet'>". $firstLetter." ".$lastLetter . "</div></div></div>"; 
+     
+  }else{
+    $class='sender_doktor';
+echo "<div class='msg-container left left1'><div class='".$class."'><div class='inicialet'>". $firstLetter." ".$lastLetter . "</div></div><div class='mesazhi_span'>" 
+ . $extract['msg']. "</div></div>";
 
-
+  }
+}
+  $previousE=$extract['Emri'];
+  $previousM=$extract['Mbiemri']; 
 
  
 }
