@@ -21,6 +21,11 @@ if (isset($_POST['submit'])) {
     		opacity: 0.9;
 		}
 
+		input {
+			color: orange;
+
+			}
+
 		#ndrysho {
 			    background-color: #FF9933;
     line-height: 30px;

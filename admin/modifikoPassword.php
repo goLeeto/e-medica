@@ -19,7 +19,12 @@ if (isset($_POST['submit'])) {
     		background-image: url("test1.png");
    			background-color: #E6E8D8;
     		opacity: 0.9;
-		}</style>
+		}
+		input {
+			color: orange;
+
+			}
+			</style>
  </head>
  <body>
  <form action="modifikoPassword.php" method="POST">

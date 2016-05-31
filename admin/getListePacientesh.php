@@ -11,6 +11,12 @@ while($extract = mysqli_fetch_array($query)){
 	$mbiemri = $extract['Mbiemri'];
 	$id = $extract['username'];
 ?>
+	<style type="text/css">
+	td{
+		color:orange; 
+		font-weight: bold;
+	}
+	</style>
 	<tr> 
 
 	<td> <?php echo $emri." ".$mbiemri;?></td>
@@ -25,10 +31,9 @@ while($extract = mysqli_fetch_array($query)){
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;" /></form></td>
-	
-	
-	</tr>
-		
+
+    <!--FSHI -->
+
 		<?php				
 						}
 
