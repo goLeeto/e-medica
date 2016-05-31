@@ -16,6 +16,8 @@ if(!isset($_SESSION["sess_user"])){
 	<head>
 	<meta charset='utf-8' />
 <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
+<script src="https://simplewebrtc.com/latest-v2.js"></script>
+<script src="includes/videoChat.js"></script>
 <script>
 $(document).ready(function() {
 
@@ -136,6 +138,7 @@ $('#results').on("click",".open_profile", function(){
 	$('#liste_mes').on('click', '.li_mesazhe li',function(){
 		$('#chatlogs').removeClass(id);
 		$(this).removeClass('palexuar');
+		
 
 		var id = $(this).attr('id');
 		$.post('lex.php',{id:id}, function(){
@@ -560,6 +563,7 @@ function getStatesNjoftime(value){
 							</div>
 							<div class='msg_bottom'>
 								<form name = "form1" style="width:inherit;">
+								<a href="#" onclick="openVideoChat()" class="button videoChat">Video Chat</a>
 									<a href= "#" class= "button send" id='send-btn'>Send</a>
 									<textarea id="mesagetext" name= "msg" rows="2" cols="40" style="resize:none;"></textarea><br />
 									     

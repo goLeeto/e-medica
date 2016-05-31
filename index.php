@@ -28,6 +28,7 @@
                 	}else if($kategoria=="admin"){
                 		header("Location: admin/home.php");
                 	}
+                    $query1 = mysqli_query($conn,"UPDATE users SET online=1 WHERE username='".$user."'");
                 }
             }else {
             

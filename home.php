@@ -19,6 +19,8 @@ if(!isset($_SESSION["sess_user"])){
 <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false">></script>
 <script src="includes/diagnostifikime.js"></script>
+<script src="https://simplewebrtc.com/latest-v2.js"></script>
+<script src="includes/videoChat.js"></script>
 <script>
 function submitChat(){
  if(form1.msg.value == '' ){
@@ -422,6 +424,7 @@ $(document).ready(function(e){
 							</div>
 							<div class='msg_bottom'>
 								<form name = "form1" style="width:inherit;">
+									<a href="#" onclick="openVideoChat()" class="button videoChat">Video Chat</a>
 									<a href= "#"  onclick= "submitChat()" class= "button send">Send</a>
 									<textarea id="mesagetext" name= "msg" rows="2" cols="40" style="resize:none;"></textarea>
 									 

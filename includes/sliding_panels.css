@@ -31,6 +31,16 @@
 	 left:0;
 	 margin: 0 auto;
 }
+#videoChatDiv{
+	position:absolute;
+	z-index:1000000;
+	 width:100vw;
+	 height:100vh;
+	 background-color:rgba(0, 0, 0, 0.7);
+	 top:0;
+	 left:0;
+	 margin: 0 auto;
+}
 #einsteinMonro{
 	position:absolute;
 	z-index:10000000;
@@ -614,13 +624,24 @@ font-family:Verdana, Geneva, sans-serif;
     border-radius: 5px;
     border-color: #E5E3E3;
     box-sizing: border-box;
-    padding-right: 70px;
+    padding-right: 163px;
 }
 
 .send{
 	z-index: 2;
     position: absolute;
     right: 17px;
+    margin-top: 6px;
+    border: 0px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: #249ADB;
+    color: white;
+}
+.videoChat{
+	z-index: 2;
+    position: absolute;
+    right: 74px;
     margin-top: 6px;
     border: 0px;
     padding: 3px 10px;
@@ -675,3 +696,33 @@ font-family:Verdana, Geneva, sans-serif;
     z-index: 10;
     margin-left:1px;
 }
+#remoteVideos{
+	margin-top: 5%!important;
+	height: 500px;
+	width: 500px;
+	margin: 0 auto;
+}
+#localVideo {
+	height: 150px!important;
+	width: 150px!important;
+	margin-top: 33.5%;
+    margin-right: 30.5%;
+	float: right;
+}
+#remoteVideos video {
+	height: 500px;
+	width: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
