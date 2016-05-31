@@ -17,7 +17,7 @@ if(!isset($_SESSION["sess_user"])){
 	<head>
 	<meta charset='utf-8' />
 <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyAZGrqpxtNLhMqcP8e0FmbHaWDJAUfsQvo&callback=initialize"></script>
+<script src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false">></script>
 <script src="includes/diagnostifikime.js"></script>
 <script>
 function submitChat(){
@@ -465,9 +465,12 @@ $(document).ready(function(e){
             document.getElementById("error").innerHTML += "Nuk arritem te gjejme vendodhjen tuaj!" + "<br />";
         });
       }
-
+      var userLatLng;
+      var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
       function geolocationSuccess(position) {
-        var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      	directionsDisplay = new google.maps.DirectionsRenderer();
+         userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         
         writeAddressName(userLatLng);
 
@@ -478,7 +481,7 @@ $(document).ready(function(e){
         };
         
         var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
-        
+         directionsDisplay.setMap(mapObject);
         new google.maps.Marker({
           map: mapObject,
           position: userLatLng
@@ -499,12 +502,59 @@ $(document).ready(function(e){
             timeout: 10 * 1000 // 10 seconds
           };
           navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, positionOptions);
+          setTimeout(function(){shortest();},2000);
         }
         else
           document.getElementById("error").innerHTML += "Your browser doesn't support the Geolocation API";
       }
 
+
+      function shortest(){
+      	var pt1, pt2;
+      	$.post('qsh.php',function(data){
+      		var data =JSON.parse(data);
+      		console.log(data);
+      		var min=99999999999999;
+      		var point1;
+      		for(var i=0; i<data.length; i++){
+      			pt1 = new google.maps.LatLng(data[i][0],data[i][1]);
+      			//alert(userLatLng);
+      			
+      			var largesi = google.maps.geometry.spherical.computeDistanceBetween(pt1, userLatLng);
+      			if(largesi<min){
+      				min = largesi;
+      				point1 = pt1;
+      			}
+      		}//for
+
+      		calcRoute(point1);
+
+
+      	});
+
+
+
+      	
+      }
+
+      function calcRoute(end) {
+  				var start = userLatLng;
+  				
+			  var request = {
+			    origin:start,
+			    destination:end,
+			    travelMode: google.maps.TravelMode.DRIVING
+			  };
+			  directionsService.route(request, function(result, status) {
+			    if (status == google.maps.DirectionsStatus.OK) {
+			      directionsDisplay.setDirections(result);
+			    }
+			  });
+			}
       window.onload = geolocateUser;
+
+
+
     </script>
 								</div>
 
